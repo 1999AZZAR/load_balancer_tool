@@ -2,6 +2,27 @@
 
 This package provides advanced tools to implement Layer 3 load balancing on a Linux system using `iproute2` and `nftables`. It allows for the simultaneous use of multiple network interfaces (e.g., Wi-Fi, Ethernet, USB tethering) to distribute outbound traffic with enterprise-grade features including real-time monitoring, health checks, session affinity, and graceful failover.
 
+## Table of Contents
+
+- [Contents](#contents)
+- [System Requirements](#system-requirements)
+- [Installation (Recommended)](#installation-recommended)
+- [Installation (Manual Service Method)](#installation-manual-service-method)
+- [Configuration](#configuration)
+  - [Core Settings](#core-settings)
+  - [Real-time Monitoring](#real-time-monitoring)
+  - [Health Checks](#health-checks)
+  - [Connection Management](#connection-management)
+  - [Failover Control](#failover-control)
+  - [Neighbor Monitoring](#neighbor-monitoring)
+  - [Logging & Metrics](#logging--metrics)
+- [Usage (Standalone Script)](#usage-standalone-script)
+- [Testing](#testing)
+- [Metrics & Monitoring](#metrics--monitoring)
+- [Technical Details](#technical-details)
+- [Uninstallation](#uninstallation)
+- [License](#license)
+
 ## Contents
 
 1. `universal_load_balancer.sh`: A standalone script for one-time configuration.
@@ -171,3 +192,7 @@ This script will:
 - Provide a detailed status report
 
 The uninstallation is designed to be safe and thorough, ensuring no leftover configuration affects your system.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

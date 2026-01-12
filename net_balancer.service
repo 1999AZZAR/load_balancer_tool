@@ -1,0 +1,17 @@
+[Unit]
+Description=Network Auto-Load Balancer Daemon
+After=network-online.target systemd-networkd.service NetworkManager.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/net_autobalance.sh
+Restart=always
+RestartSec=5
+User=root
+# Clean up on stop
+ExecStopPost=/bin/ip rule del pref 90
+ExecStopPost=/usr/sbin/nft delete table ip loadbalancing
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+# Databases
+memory.db
+*.db
+
+# Temporary files
+/tmp/routes.txt
+*.tmp
+*.log
+
+# OS/IDE specifics
+.DS_Store
+.vscode/
+.idea/
+*.swp
